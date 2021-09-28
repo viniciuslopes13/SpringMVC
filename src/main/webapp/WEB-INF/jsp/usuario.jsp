@@ -17,7 +17,42 @@
 				<td><form:password path="senha" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Submit" /></td>
+				<td><form:label path="endereco">Endereço</form:label></td>
+				<td><form:textarea path="endereco" rows="5" cols="30" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="receberNoticias">Inscrição Newsletter</form:label></td>
+				<td><form:checkbox path="receberNoticias" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="frameworkFavorito">Frameworks favoritos da Web</form:label></td>
+				<td><form:checkboxes items="${listaFrameworksWeb}"
+						path="frameworkFavorito" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="genero">Genero</form:label></td>
+				<td><form:radiobutton path="genero" value="M" label="Masculino" />
+					<form:radiobutton path="genero" value="F" label="Feminino" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="numeroFavorito">Número favorito</form:label></td>
+				<td><form:radiobuttons path="numeroFavorito"
+						items="${listaNumeros}" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="pais">País</form:label></td>
+				<td><form:select path="pais">
+						<form:option value="NONE" label="Selecione" />
+						<form:options items="${listaPaises}" />
+					</form:select></td>
+			</tr>
+			<tr>
+				<td><form:label path="habilidades">Habilidades</form:label></td>
+				<td><form:select path="habilidades" items="${listaHabilidades}"
+						multiple="true" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Enviar" /></td>
 			</tr>
 		</table>
 	</form:form>
